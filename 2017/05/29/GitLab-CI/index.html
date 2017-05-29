@@ -5,16 +5,16 @@
   
   <title>GitLab CI - Calorie Blog</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="1. GitLab CI与GitLab Runner简述Getting started with GitLab CI GitLab Runner 2. 下载并安装GitLab Runner安装方式可以分为两种：通过二进制文件安装和 Docker 安装 最简单的是通过 Homebrew 进行下载安装 brew install gitlab-ci-multi-runner，执行成功后直接跳到下一步">
+  <meta name="description" content="1. GitLab CI与GitLab Runner简述Getting started with GitLab CI GitLab Runner 2. 下载并安装GitLab Runner安装方式可以分为两种：通过二进制文件安装和Docker安装 最简单的是通过Homebrew进行下载安装brew install gitlab-ci-multi-runner，执行成功后直接跳到下一步   若Git">
 <meta property="og:type" content="article">
 <meta property="og:title" content="GitLab CI">
 <meta property="og:url" content="http://yoursite.com/2017/05/29/GitLab-CI/index.html">
 <meta property="og:site_name" content="Calorie Blog">
-<meta property="og:description" content="1. GitLab CI与GitLab Runner简述Getting started with GitLab CI GitLab Runner 2. 下载并安装GitLab Runner安装方式可以分为两种：通过二进制文件安装和 Docker 安装 最简单的是通过 Homebrew 进行下载安装 brew install gitlab-ci-multi-runner，执行成功后直接跳到下一步">
-<meta property="og:updated_time" content="2017-05-29T04:22:46.000Z">
+<meta property="og:description" content="1. GitLab CI与GitLab Runner简述Getting started with GitLab CI GitLab Runner 2. 下载并安装GitLab Runner安装方式可以分为两种：通过二进制文件安装和Docker安装 最简单的是通过Homebrew进行下载安装brew install gitlab-ci-multi-runner，执行成功后直接跳到下一步   若Git">
+<meta property="og:updated_time" content="2017-05-29T04:31:31.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="GitLab CI">
-<meta name="twitter:description" content="1. GitLab CI与GitLab Runner简述Getting started with GitLab CI GitLab Runner 2. 下载并安装GitLab Runner安装方式可以分为两种：通过二进制文件安装和 Docker 安装 最简单的是通过 Homebrew 进行下载安装 brew install gitlab-ci-multi-runner，执行成功后直接跳到下一步">
+<meta name="twitter:description" content="1. GitLab CI与GitLab Runner简述Getting started with GitLab CI GitLab Runner 2. 下载并安装GitLab Runner安装方式可以分为两种：通过二进制文件安装和Docker安装 最简单的是通过Homebrew进行下载安装brew install gitlab-ci-multi-runner，执行成功后直接跳到下一步   若Git">
   
   
   <link href="/webfonts/ptserif/main.css" rel='stylesheet' type='text/css'>
@@ -67,37 +67,37 @@
       
         <h2 id="1-GitLab-CI与GitLab-Runner简述"><a href="#1-GitLab-CI与GitLab-Runner简述" class="headerlink" title="1. GitLab CI与GitLab Runner简述"></a>1. GitLab CI与GitLab Runner简述</h2><p><a href="https://docs.gitlab.com/ee/ci/quick_start/README.html" target="_blank" rel="external">Getting started with GitLab CI</a></p>
 <p><a href="https://gitlab.com/gitlab-org/gitlab-ci-multi-runner" target="_blank" rel="external">GitLab Runner</a></p>
-<h2 id="2-下载并安装GitLab-Runner"><a href="#2-下载并安装GitLab-Runner" class="headerlink" title="2. 下载并安装GitLab Runner"></a>2. 下载并安装GitLab Runner</h2><p>安装方式可以分为两种：通过二进制文件安装和 Docker 安装</p>
-<p>最简单的是通过 Homebrew 进行下载安装 brew install gitlab-ci-multi-runner，执行成功后直接跳到下一步</p>
+<h2 id="2-下载并安装GitLab-Runner"><a href="#2-下载并安装GitLab-Runner" class="headerlink" title="2. 下载并安装GitLab Runner"></a>2. 下载并安装GitLab Runner</h2><p>安装方式可以分为两种：通过二进制文件安装和<code>Docker</code>安装</p>
+<p>最简单的是通过<code>Homebrew</code>进行下载安装<code>brew install gitlab-ci-multi-runner</code>，执行成功后直接跳到下一步</p>
 <hr>
 
-<p>若 GitLab 与 Runner 版本不兼容，会报错 GitLab Runner &gt;= 9.0 can be used ONLY with GitLab CE/EE &gt;= 9.0</p>
+<p>若<code>GitLab</code>与<code>Runner</code>版本不兼容，会报错<code>GitLab Runner &gt;= 9.0 can be used ONLY with GitLab CE/EE &gt;= 9.0</code></p>
 <p>解决方法一：</p>
-<p>Homebrew 下载指定版本的 gitlab-ci-multi-runner，但并没有找到怎么安装指定版本模块的 brew 命令</p>
+<p><code>Homebrew</code>下载指定版本的<code>gitlab-ci-multi-runner</code>，但并没有找到怎么安装指定版本模块的<code>brew</code>命令</p>
 <p>解决方法二：</p>
 <p>手动安装指定版本，下载 <a href="https://gitlab-ci-multi-runner-downloads.s3.amazonaws.com/v1.11.2/index.html" target="_blank" rel="external">binaries/gitlab-ci-multi-runner-darwin-amd64</a> ，然后执行命令</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">cp gitlab-ci-multi-runner-darwin-amd64 /usr/<span class="built_in">local</span>/bin/gitlab-ci-multi-runner</div><div class="line"></div><div class="line">chmod +x /usr/<span class="built_in">local</span>/bin/gitlab-ci-multi-runner</div></pre></td></tr></table></figure>
-<p>拷贝 gitlab-ci-multi-runner-darwin-amd64 到 bin 命令目录，并赋予 gitlab-ci-multi-runner 可执行权限.</p>
+<p>拷贝<code>gitlab-ci-multi-runner-darwin-amd64</code>到<code>bin</code>命令目录，并赋予<code>gitlab-ci-multi-runner</code>可执行权限.</p>
 <h2 id="3-绑定GitLab-CI，注册GitLab-Runner"><a href="#3-绑定GitLab-CI，注册GitLab-Runner" class="headerlink" title="3. 绑定GitLab CI，注册GitLab Runner"></a>3. 绑定GitLab CI，注册GitLab Runner</h2><p>访问项目配置页面</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div></pre></td><td class="code"><pre><div class="line">Please enter the gitlab-ci coordinator URL (e.g. [https://gitlab.com/](https://gitlab.com/)):</div><div class="line"></div><div class="line">[http://gitlab.bojoy.net:9090/ci](http://gitlab.bojoy.net:9090/ci)</div><div class="line"></div><div class="line">Please enter the gitlab-ci token <span class="keyword">for</span> this runner:</div><div class="line"></div><div class="line">57WDUuxZRpiVbTYW_AFd</div><div class="line"></div><div class="line">Please enter the gitlab-ci description <span class="keyword">for</span> this runner:</div><div class="line"></div><div class="line">Please enter the gitlab-ci tags <span class="keyword">for</span> this runner (comma separated):</div><div class="line"></div><div class="line">calorie</div><div class="line"></div><div class="line">Whether to run untagged builds [<span class="literal">true</span>/<span class="literal">false</span>]:</div><div class="line"></div><div class="line">Registering runner… succeeded runner=57WDUuxZ</div><div class="line"></div><div class="line">Please enter the executor: shell, docker+machine, docker-ssh, parallels, ssh, virtualbox, docker-ssh+machine, kubernetes, docker:</div><div class="line"></div><div class="line">shell</div><div class="line"></div><div class="line">Runner registered successfully. Feel free to start it, but <span class="keyword">if</span> it’s running already the config should be automatically reloaded!</div></pre></td></tr></table></figure>
 <p>配置信息说明</p>
 <ul>
-<li>输入项目 GitLab CI 的 URL</li>
-<li>输入项目 GitLab CI 的 token</li>
-<li>输入项目 GitLab Runner 的 description</li>
-<li>输入项目 GitLab Runner 的 tags (在项目构建流程 yaml 文件里面指定 tag，就是匹配使用哪个 tag 的 runner！)</li>
-<li>是否运行未加标签的构建, true/false</li>
-<li>执行者，一般选 shell 或 docker</li>
-<li>Runner 注册成功！</li>
+<li>输入项目<code>GitLab CI</code>的<code>URL</code></li>
+<li>输入项目<code>GitLab CI</code>的<code>token</code></li>
+<li>输入项目<code>GitLab Runner</code>的<code>description</code></li>
+<li>输入项目<code>GitLab Runner</code>的<code>tags</code>(在项目构建流程<code>yaml</code>文件里面指定<code>tag</code>，就是匹配使用哪个<code>tag</code>的<code>runner</code>！)</li>
+<li>是否运行未加标签的构建, <code>true/false</code></li>
+<li>执行者，一般选<code>shell</code>或<code>docker</code></li>
+<li><code>Runner</code>注册成功！</li>
 </ul>
-<p>若注册成功，在项目配置 Runner 中则可以看到刚注册的 Runner 信息</p>
+<p>若注册成功，在项目配置<code>Runner</code>中则可以看到刚注册的<code>Runner</code>信息</p>
 <h2 id="4-启动GitLab-Runner"><a href="#4-启动GitLab-Runner" class="headerlink" title="4. 启动GitLab Runner"></a>4. 启动GitLab Runner</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">gitlab-ci-multi-runner install</div><div class="line">gitlab-ci-multi-runner start</div><div class="line">gitlab-ci-multi-runner run</div></pre></td></tr></table></figure>
-<h2 id="5-定义项目构建流程"><a href="#5-定义项目构建流程" class="headerlink" title="5. 定义项目构建流程"></a>5. 定义项目构建流程</h2><p>根目录创建 .gitlab-ci.yml 文件，iOS 模板</p>
+<h2 id="5-定义项目构建流程"><a href="#5-定义项目构建流程" class="headerlink" title="5. 定义项目构建流程"></a>5. 定义项目构建流程</h2><p>根目录创建<code>.gitlab-ci.yml</code>文件，<code>iOS</code>模板</p>
 <figure class="highlight yaml"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div></pre></td><td class="code"><pre><div class="line"><span class="string">Configuration</span> <span class="string">of</span> <span class="string">your</span> <span class="string">jobs</span> <span class="string">with</span> <span class="string">.gitlab-ci.yml</span> <span class="string">(https://docs.gitlab.com/ee/ci/yaml/README.html)</span></div><div class="line"></div><div class="line"><span class="comment"># This file is a template, and might need editing before it works on your project.</span></div><div class="line"><span class="comment"># Lifted from: https://about.gitlab.com/2016/03/10/setting-up-gitlab-ci-for-ios-projects/</span></div><div class="line"><span class="comment"># This file assumes an own GitLab CI runner, setup on an OS X system.</span></div><div class="line"><span class="attr">stages:</span></div><div class="line"><span class="bullet">  -</span> <span class="string">build</span></div><div class="line"><span class="bullet">  -</span> <span class="string">archive</span></div><div class="line"></div><div class="line"><span class="attr">build_project:</span></div><div class="line"><span class="attr">  stage:</span> <span class="string">build</span></div><div class="line"><span class="attr">  script:</span></div><div class="line"><span class="bullet">    -</span> <span class="string">xcodebuild</span> <span class="string">clean</span> <span class="bullet">-project</span> <span class="string">ProjectName.xcodeproj</span> <span class="bullet">-scheme</span> <span class="string">SchemeName</span> <span class="string">| xcpretty</span></div><div class="line">    - xcodebuild test -project ProjectName.xcodeproj -scheme SchemeName -destination 'platform=iOS Simulator,name=iPhone 6s,OS=9.2' | xcpretty -s</div><div class="line"><span class="attr">  tags:</span></div><div class="line"><span class="bullet">    -</span> <span class="string">ios_9-2</span></div><div class="line"><span class="bullet">    -</span> <span class="string">xcode_7-2</span></div><div class="line"><span class="bullet">    -</span> <span class="string">osx_10-11</span></div><div class="line"></div><div class="line"><span class="attr">archive_project:</span></div><div class="line"><span class="attr">  stage:</span> <span class="string">archive</span></div><div class="line"><span class="attr">  script:</span></div><div class="line"><span class="bullet">    -</span> <span class="string">xcodebuild</span> <span class="string">clean</span> <span class="string">archive</span> <span class="bullet">-archivePath</span> <span class="string">build/ProjectName</span> <span class="bullet">-scheme</span> <span class="string">SchemeName</span></div><div class="line"><span class="bullet">    -</span> <span class="string">xcodebuild</span> <span class="bullet">-exportArchive</span> <span class="bullet">-exportFormat</span> <span class="string">ipa</span> <span class="bullet">-archivePath</span> <span class="string">"build/ProjectName.xcarchive"</span> <span class="bullet">-exportPath</span> <span class="string">"build/ProjectName.ipa"</span> <span class="bullet">-exportProvisioningProfile</span> <span class="string">"ProvisioningProfileName"</span></div><div class="line"><span class="attr">  only:</span></div><div class="line"><span class="bullet">    -</span> <span class="string">master</span></div><div class="line"><span class="attr">  artifacts:</span></div><div class="line"><span class="attr">    paths:</span></div><div class="line"><span class="bullet">    -</span> <span class="string">build/ProjectName.ipa</span></div><div class="line"><span class="attr">  tags:</span></div><div class="line"><span class="bullet">    -</span> <span class="string">ios_9-2</span></div><div class="line"><span class="bullet">    -</span> <span class="string">xcode_7-2</span></div><div class="line"><span class="bullet">    -</span> <span class="string">osx_10-11</span></div></pre></td></tr></table></figure>
 <h3 id="注意"><a href="#注意" class="headerlink" title="注意"></a>注意</h3><ol>
-<li>你必须熟悉 xcodebuild 命令<br></li>
-<li>tags 为之前注册 GitLab Runner 的 tags<br></li>
-<li>编译 Scheme 需勾选 Shared<br></li>
+<li>你必须熟悉<code>xcodebuild</code>命令<br></li>
+<li><code>tags</code>为之前注册<code>GitLab Runner</code>的<code>tags</code><br></li>
+<li>编译<code>Scheme</code>需勾选<code>Shared</code><br></li>
 </ol>
 <h2 id="6-构建效果"><a href="#6-构建效果" class="headerlink" title="6. 构建效果"></a>6. 构建效果</h2><h2 id="7-引用"><a href="#7-引用" class="headerlink" title="7. 引用"></a>7. 引用</h2><p><a href="http://baike.baidu.com/item/%E6%8C%81%E7%BB%AD%E9%9B%86%E6%88%90" target="_blank" rel="external">持续集成</a> <br><br><a href="http://www.jianshu.com/p/2b43151fb92e" target="_blank" rel="external">GitLab-CI 与 GitLab-Runner</a> <br><br><a href="http://blog.csdn.net/aixiaoyang168/article/details/72168834" target="_blank" rel="external">Docker 搭建自己的 Gitlab CI Runner</a> <br><br><a href="https://segmentfault.com/a/1190000006120164" target="_blank" rel="external">用 GitLab CI 进行持续集成</a> <br></p>
 
