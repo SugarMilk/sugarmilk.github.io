@@ -69,7 +69,7 @@
 <p>但如果公司的GitLab版本与Runner版本不兼容，则报错<code>GitLab Runner &gt;= 9.0 can be used ONLY with GitLab CE/EE &gt;= 9.0</code></p>
 <p>解决方法一：<code>Homebrew</code>下载指定版本的<code>gitlab-ci-multi-runner</code>，但并没有找到怎么安装指定版本模块的<code>brew</code>命令</p>
 <p>解决方法二：手动安装指定版本</p>
-<p>下载 binaries/gitlab-ci-multi-runner-darwin-amd64 (<a href="https://gitlab-ci-multi-runner-downloads.s3.amazonaws.com/v1.11.2/index.html" target="_blank" rel="external">https://gitlab-ci-multi-runner-downloads.s3.amazonaws.com/v1.11.2/index.html</a>)</p>
+<p>下载 <a href="https://gitlab-ci-multi-runner-downloads.s3.amazonaws.com/v1.11.2/index.html" target="_blank" rel="external">binaries/gitlab-ci-multi-runner-darwin-amd64</a></p>
 <p>然后执行命令</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">cp gitlab-ci-multi-runner-darwin-amd64 /usr/<span class="built_in">local</span>/bin/gitlab-ci-multi-runner</div><div class="line"></div><div class="line">chmod +x /usr/<span class="built_in">local</span>/bin/gitlab-ci-multi-runner</div></pre></td></tr></table></figure>
 <p>拷贝 gitlab-ci-multi-runner-darwin-amd64 到bin命令目录，并赋予 gitlab-ci-multi-runner 可执行权限.</p>
